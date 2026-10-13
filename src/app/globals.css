@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hotel-bg: #F7F9FC;
+  --hotel-card: #FFFFFF;
+  --hotel-accent: #245BDB;
+  --hotel-navy: #17345C;
+  --hotel-ice: #EAF3FF;
+  --hotel-secondary: #6B9CFF;
+  --hotel-text: #172033;
+  --hotel-muted: #65738B;
+  --hotel-border: #E1E8F2;
+  --hotel-success: #16845B;
+  --hotel-warning: #D98A16;
+  --hotel-error: #D94343;
+}
+
+body {
+  background-color: var(--hotel-bg);
+  color: var(--hotel-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Luxury Enterprise Feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F4F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4D2E6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9BB3D6;
+}
+
+/* Glassmorphism and Luxury Surface Utilities */
+.hotel-card {
+  background: #FFFFFF;
+  border: 1px solid #E1E8F2;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px -2px rgba(23, 52, 92, 0.05), 0 4px 16px -4px rgba(23, 52, 92, 0.07);
+}
+
+.hotel-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hotel-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(36, 91, 219, 0.12), 0 4px 12px -2px rgba(23, 52, 92, 0.08);
+  border-color: #C2D7FF;
+}
+
+.ice-panel {
+  background-color: #EAF3FF;
+  border: 1px solid #D2E4FF;
+  border-radius: 10px;
+}
+
+/* Interactive Badge Styles */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Print styles for reports & folios */
+@media print {
+  aside, header, .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
